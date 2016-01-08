@@ -5,6 +5,7 @@ from django.db import models
 class Mascota(models.Model):
     nombre = models.CharField(max_length=150)
     descripcion = models.TextField()
+    raza = models.CharField(max_length=50)
     fecha_pub = models.DateTimeField('fecha publicacion', auto_now_add=True, blank=True)
     
     def __str__(self):
